@@ -1,9 +1,7 @@
 ﻿@page "/"
-
 @inject IHttpClientFactory  _clientFactory
 @inject IConfiguration _config
-<h3>Pension</h3>
-
+<h3>Pensionsberegner</h3>
         <table class="table table-striped">
             <thead class="thead-dark">
                 <tr>
@@ -25,7 +23,6 @@
                 </tr>               
             </tbody>
         </table>
-
 @code {
     ResponsePublicPension responsePublicPension = null;
 

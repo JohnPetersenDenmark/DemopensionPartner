@@ -112,7 +112,7 @@ using DemopensionPartner.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 29 "C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\Pages\PublicPension.razor"
+#line 26 "C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\Pages\PublicPension.razor"
        
     ResponsePublicPension responsePublicPension = null;
 
