@@ -118,7 +118,7 @@ using DemopensionPartner.Shared;
 
     protected override async Task OnInitializedAsync()
     {
-
+         
 
         RequestPublicPension requestPublicPension = new RequestPublicPension() { licenseKey = "3QXT-W5B3-GYAE-ABJ2-X5S6-FQ27-DQ" };
 
