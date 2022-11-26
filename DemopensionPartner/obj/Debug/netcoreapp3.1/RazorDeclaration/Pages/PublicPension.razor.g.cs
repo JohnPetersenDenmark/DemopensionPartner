@@ -103,7 +103,7 @@ using DemopensionPartner.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/pension")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class PublicPension : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -117,9 +117,7 @@ using DemopensionPartner.Shared;
     ResponsePublicPension responsePublicPension = null;
 
     protected override async Task OnInitializedAsync()
-    {
-         
-
+    {         
         RequestPublicPension requestPublicPension = new RequestPublicPension() { licenseKey = "3QXT-W5B3-GYAE-ABJ2-X5S6-FQ27-DQ" };
 
         //requestPublicPension.data.customer.danishSSN = "1106590605";

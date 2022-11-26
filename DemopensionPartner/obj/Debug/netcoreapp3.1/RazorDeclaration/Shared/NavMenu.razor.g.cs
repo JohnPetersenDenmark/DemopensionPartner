@@ -111,7 +111,7 @@ using DemopensionPartner.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 23 "C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\Shared\NavMenu.razor"
+#line 18 "C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
