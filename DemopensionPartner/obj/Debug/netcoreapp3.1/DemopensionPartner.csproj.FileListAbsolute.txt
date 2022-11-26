@@ -20,8 +20,6 @@ C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcore
 C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\DemopensionPartner.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\DemopensionPartner.RazorComponent.input.cache
 C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\RazorDeclaration\App.razor.g.cs
-C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Counter.razor.g.cs
-C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\FetchData.razor.g.cs
 C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\PublicPension.razor.g.cs
 C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
@@ -34,8 +32,6 @@ C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcore
 C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\DemopensionPartner.TagHelpers.output.cache
 C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\DemopensionPartner.RazorCoreGenerate.cache
 C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\Razor\App.razor.g.cs
-C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\Razor\Pages\Counter.razor.g.cs
-C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\Razor\Pages\FetchData.razor.g.cs
 C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\Razor\Pages\Index.razor.g.cs
 C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\Razor\Pages\PublicPension.razor.g.cs
 C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs
