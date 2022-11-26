@@ -1,0 +1,62 @@
+﻿@page "/pension"
+
+@inject IHttpClientFactory  _clientFactory
+@inject IConfiguration _config
+<h3>Pension</h3>
+
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        Folkepension
+                    </th>
+                    <th>
+                        Tillæg
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @if (responsePublicPension != null)
+                    {
+                        <td>@responsePublicPension.publicPension.customer.publicPensionBase</td>
+                        <td>@responsePublicPension.publicPension.customer.publicPensionSupplement</td>
+                    }
+                </tr>               
+            </tbody>
+        </table>
+
+@code {
+    ResponsePublicPension responsePublicPension = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+
+        RequestPublicPension requestPublicPension = new RequestPublicPension() { licenseKey = "3QXT-W5B3-GYAE-ABJ2-X5S6-FQ27-DQ" };
+
+        //requestPublicPension.data.customer.danishSSN = "1106590605";
+        //requestPublicPension.data.customer.pensionDate = "01-01-2021";
+
+        requestPublicPension.data.customer.salary = 700000;
+
+        HttpClient _httpClient = _clientFactory.CreateClient(_config.GetValue<string>("PensionPartner:PublicPensionHTTPClientName"));
+
+        var requestPublicPensionJson = new StringContent(JsonSerializer.Serialize(requestPublicPension), Encoding.UTF8, "application/json");
+
+        try
+        {
+            using var httpResponse = await _httpClient.PutAsync("", requestPublicPensionJson);
+
+            responsePublicPension = JsonSerializer.Deserialize<ResponsePublicPension>(httpResponse.Content.ReadAsStringAsync().Result);
+            var dummy = 1;
+        }
+        catch (Exception e1)
+        {
+            string message = e1.Message;
+        }
+
+
+        var x = 0;
+    }
+}
