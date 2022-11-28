@@ -112,18 +112,18 @@ using DemopensionPartner.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 26 "C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\Pages\PublicPension.razor"
+#line 89 "C:\Users\jp\source\repos\DemopensionPartner\DemopensionPartner\Pages\PublicPension.razor"
        
     ResponsePublicPension responsePublicPension = null;
 
-    protected override async Task OnInitializedAsync()
-    {         
+    private  async Task getPublicPension()
+    {
         RequestPublicPension requestPublicPension = new RequestPublicPension() { licenseKey = "3QXT-W5B3-GYAE-ABJ2-X5S6-FQ27-DQ" };
 
         //requestPublicPension.data.customer.danishSSN = "1106590605";
         //requestPublicPension.data.customer.pensionDate = "01-01-2021";
 
-        requestPublicPension.data.customer.salary = 700000;
+        requestPublicPension.data.customer.salary = 200000;
 
         HttpClient _httpClient = _clientFactory.CreateClient(_config.GetValue<string>("PensionPartner:PublicPensionHTTPClientName"));
 
@@ -140,9 +140,6 @@ using DemopensionPartner.Shared;
         {
             string message = e1.Message;
         }
-
-
-        var x = 0;
     }
 
 #line default

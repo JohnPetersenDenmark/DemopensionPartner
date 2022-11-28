@@ -2,38 +2,101 @@
 @inject IHttpClientFactory  _clientFactory
 @inject IConfiguration _config
 <h3>Pensionsberegner</h3>
-        <table class="table table-striped">
-            <thead class="thead-dark">
-                <tr>
-                    <th>
-                        Folkepension
-                    </th>
-                    <th>
-                        Tillæg
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    @if (responsePublicPension != null)
-                    {
-                        <td>@responsePublicPension.publicPension.customer.publicPensionBase</td>
-                        <td>@responsePublicPension.publicPension.customer.publicPensionSupplement</td>
-                    }
-                </tr>               
-            </tbody>
-        </table>
+
+<table width="90%">
+    <tr>
+        <td style="width:30%">
+            <table class="table table-striped">               
+                <tbody>
+                    <tr>
+                        <td colspan="2" align="center" style="font-size:20px">
+                            Beregninsgrundlag
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            CPR
+                        </td>
+                        <td align="right">
+                            1106590605
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Civilstatus
+                        </td>
+                        <td align="right">
+                            Single
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Lønindkomst</td>
+                        <td align="right">200.000 kr.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Privat pensionopsparing
+                        </td>
+                        <td align="right">
+                            0 kr.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Udbetaling fra privat pensionsordning
+                        </td>
+                        <td align="right">
+                            0 kr.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Medlem af Folkekirken
+                        </td>
+                        <td align="right">
+                            Ja
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" style="font-size:20px">
+                            Beregnet folkepension
+                        </td>
+                    </tr>
+                    <tr>
+                        @if (responsePublicPension != null)
+                        {
+                            <td>Pension (grundbeløb)</td>
+                            <td align="right">@responsePublicPension.publicPension.customer.publicPensionBase kr.</td>
+                        }
+                    </tr>
+                    <tr>
+                        @if (responsePublicPension != null)
+                        {
+                            <td>Pensionstillæg</td>
+                            <td align="right">@responsePublicPension.publicPension.customer.publicPensionSupplement kr.</td>
+                        }
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button class="btn btn-outline-dark" @onclick="@getPublicPension">Beregn</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
 @code {
     ResponsePublicPension responsePublicPension = null;
 
-    protected override async Task OnInitializedAsync()
-    {         
+    private  async Task getPublicPension()
+    {
         RequestPublicPension requestPublicPension = new RequestPublicPension() { licenseKey = "3QXT-W5B3-GYAE-ABJ2-X5S6-FQ27-DQ" };
 
         //requestPublicPension.data.customer.danishSSN = "1106590605";
         //requestPublicPension.data.customer.pensionDate = "01-01-2021";
 
-        requestPublicPension.data.customer.salary = 700000;
+        requestPublicPension.data.customer.salary = 200000;
 
         HttpClient _httpClient = _clientFactory.CreateClient(_config.GetValue<string>("PensionPartner:PublicPensionHTTPClientName"));
 
@@ -50,8 +113,5 @@
         {
             string message = e1.Message;
         }
-
-
-        var x = 0;
     }
 }
