@@ -93,9 +93,6 @@
     {
         RequestPublicPension requestPublicPension = new RequestPublicPension() { licenseKey = "3QXT-W5B3-GYAE-ABJ2-X5S6-FQ27-DQ" };
 
-        //requestPublicPension.data.customer.danishSSN = "1106590605";
-        //requestPublicPension.data.customer.pensionDate = "01-01-2021";
-
         requestPublicPension.data.customer.salary = 200000;
 
         HttpClient _httpClient = _clientFactory.CreateClient(_config.GetValue<string>("PensionPartner:PublicPensionHTTPClientName"));
